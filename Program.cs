@@ -42,7 +42,20 @@ namespace CapacityCalcV2
 
         static void SphereCalc()
         {
-            Console.WriteLine("NOT WORKING CURRENTLY BECAUSE I AM LAZY");
+            //diameter
+            Console.WriteLine("Please insert the diameter and press Enter:");
+            string diameterString = Console.ReadLine();
+            double diameter = Convert.ToInt32(diameterString);
+
+            //calc 
+            double pi = Math.PI;
+            double radius = diameter / 2;
+            double radiusCube = radius * radius * radius;
+
+            //calc volume
+            double sphereVolume = (4.0f / 3.0f) * pi * radiusCube;
+            Console.WriteLine("\r\nThe result is :" + sphereVolume);
+
         }
 
         static void Main(string[] args)
